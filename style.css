@@ -1,0 +1,55 @@
+/* .carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.navbar {
+  padding : 14px;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}
+
+#navbar-home {
+  background-color : white; 
+  display : flex;
+  width: 100%;
+}
+
+.search-flex {
+  display : inline-flex;
+  margin-left : auto;
+}
+
+#homeCarousel {
+  padding-top : 5rem;
+  padding-bottom: 1rem;
+}
+
+#backgroundCarousel {
+  background-color: #333; 
+}
+
+.carousel-indicators:hover{
+    color:rgb(255, 0, 0) !important;
+}
+
+@media screen and (min-width: 768px){
+  /* #navbar-home {
+    margin-left: -8rem;
+  } */

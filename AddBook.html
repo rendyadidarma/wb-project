@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    Required meta tags
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  
+  <body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" style="font-family: Papyrus, Fantasy">Online Library</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" href="genre.html">Genre</a>
+              <a class="nav-link" href="favorite.html">Favorite</a>
+              <a class="nav-link active" href="AddBook.html">Add Book</a>
+            </div>
+
+            <form class="d-flex">
+              <input class="form-control me-2" style="text-align: center;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+
+          </div>
+        </div>
+      </nav>
+ <!-- Navbar End -->
+ <form>
+            
+  <div class="form-group">
+      <div class="col-auto">
+          <h1> 
+              Add Book
+          </h1>
+          <br>
+          <label for="ProductName">Product Name</label>
+          <div class="input-group mb-2">
+          <input type="text" id="product" class="form-control" placeholder="Enter Product Name">
+          </div>
+      </div>
+  </div>
+  <div class="form-group">   
+      <div class="col-auto">
+          <label for="Price">Product Price</label>
+          <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">
+                      $
+                  </div>
+              </div>
+              <input type="number" id="harga" class="form-control" id="inlineFormInputGroup" placeholder="Product Price">
+          </div>
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-auto">
+          <label for="PDesc">Product Description</label>
+          <div class="input-group mb-2">
+          <input type="text" id="desc" class="form-control" placeholder="Enter Product Description">
+          </div>
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-auto">
+          <label for="image">Product Image</label>
+          <br>
+          <div class="input-group mb-2">
+              <form action="/aboutproduct.html">
+                  <input type="file" name="filename" style="height: 44px;" id="file" class="form-control">
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-auto">
+          <label for="Variant">Variant</label>
+          <input type="color" class="form-control"/>
+      </div>
+  </div>
+  <div class="form-check">
+      <div class="col-auto">
+          <input type="checkbox" id="agree" class="form-check-input">
+          <label class="form-check-label" for="agree">Please check the box if you agree</label>
+      </div>
+  </div>
+  <div class="form-check">
+      <button type="button" onclick="simpan();" class="btn btn-primary">Submit</button>
+  </div>
+  
+</form>
+
+<!-- Conten -->
+<script>
+  //alert("aaa");
+  function simpan()
+  {
+      var product=$("#product").val();
+      var harga=$("#harga").val();
+      var desc=$("#desc").val();
+      var file=$("#file").val();
+      if ($('#agree').prop('checked')) {
+          var msg="";
+          if (product=="")
+          {
+              msg=msg+"Product tidak boleh kosong\n";
+          }
+          if (harga=="")
+          {
+              msg=msg+"Product tidak boleh kosong\n";
+          }
+          if (desc=="")
+          {
+              msg=msg+"Deskripsi tidak boleh kosong\n";
+          }
+          if (file=="")
+          {
+              msg=msg+"File image tidak boleh kosong\n";
+          }
+          if (msg=="")
+          {
+              alert("Data sudah benar");
+          }
+          else {
+              alert(msg);
+          }
+      }
+      else {
+          alert("Anda belum mencentang");
+      }
+
+     
+  }
+</script>
+
+
+  </body>
+</html>
